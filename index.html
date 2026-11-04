@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#08111f">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="game-shell">
+        <header class="top-bar">
+            <div>
+                <p class="eyebrow">ARCADE</p>
+                <h1>Snake</h1>
+            </div>
+            <button class="icon-button" id="pauseButton" type="button" aria-label="Pause game">
+                <span class="pause-bars"></span>
+            </button>
+        </header>
+
+        <section class="stats" aria-label="Game statistics">
+            <div class="stat-card"><span>Score</span><strong id="score">0</strong></div>
+            <div class="stat-card"><span>Best</span><strong id="bestScore">0</strong></div>
+        </section>
+
+        <section class="board-wrap">
+            <canvas id="gameCanvas" width="400" height="400" aria-label="Snake game board"></canvas>
+            <div class="overlay" id="overlay">
+                <div class="overlay-card">
+                    <p class="overlay-label" id="overlayLabel">READY?</p>
+                    <h2 id="overlayTitle">Snake Game</h2>
+                    <p id="overlayText">Use the arrow keys or swipe to move.</p>
+                    <button id="playButton" type="button">Start Game</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="controls" aria-label="Movement controls">
+            <button class="control-button up" data-direction="up" type="button" aria-label="Move up">▲</button>
+            <button class="control-button left" data-direction="left" type="button" aria-label="Move left">◀</button>
+            <button class="control-button down" data-direction="down" type="button" aria-label="Move down">▼</button>
+            <button class="control-button right" data-direction="right" type="button" aria-label="Move right">▶</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
